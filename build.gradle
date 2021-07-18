@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.6.RELEASE'
+        springBootVersion = '2.2.6.RELEASE'
         springCloudVersion = 'Greenwich.RELEASE'
         karateVersion = '0.9.4'
     }
@@ -47,6 +47,12 @@ ext {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework:spring-jms:5.1.8.RELEASE'
+    implementation 'org.projectlombok:lombok:1.18.4'
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.4'
+
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-web-services')
     compile('org.springframework.cloud:spring-cloud-starter-openfeign')
@@ -56,12 +62,21 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-netflix-hystrix')
     compile('org.springframework.cloud:spring-cloud-starter-ribbon:1.4.7.RELEASE')
     compile('com.netflix.ribbon:ribbon:2.2.2')
-    compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('junit:junit:4.12')
     testCompile('com.github.tomakehurst:wiremock:2.25.1')
     testCompile('com.intuit.karate:karate-junit4:' + karateVersion)
     testCompile('com.intuit.karate:karate-apache:' + karateVersion)
+
+    implementation 'org.springframework.boot:spring-boot-starter-activemq'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    testImplementation 'com.h2database:h2'
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    testImplementation("org.assertj:assertj-core:3.11.1")
+
+    testImplementation("io.rest-assured:spring-mock-mvc")
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
 }
 
 dependencyManagement {
@@ -71,10 +86,14 @@ dependencyManagement {
 }
 
 test {
-    exclude '**/*Runner.class'
+    useJUnitPlatform()
 }
 
-task karate(type: Test) {
-    workingDir 'src/test/java'
-    include '**/*Runner.class'
+sourceSets {
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
 }

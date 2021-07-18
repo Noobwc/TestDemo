@@ -172,28 +172,28 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">Given url demoBaseUrl</div>
-<div class="time-cell passed">0.000036</div>
+<div class="time-cell passed">0.000033</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And path 'bookTitle'</div>
-<div class="time-cell passed">0.001589</div>
+<div class="time-cell passed">0.00152</div>
 </div>
 <div class="step-row">
 <div class="step-cell failed">When method get</div>
-<div class="time-cell failed">0.026093</div>
+<div class="time-cell failed">5.023095</div>
 </div>
-<div class="preformatted">14:08:45.075 request:
+<div class="preformatted">09:58:19.223 request:
 1 &gt; GET http://localhost:9090/bookTitle
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:9090
 1 &gt; User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_292)
 
-14:08:45.078 org.apache.http.conn.HttpHostConnectException: Connect to localhost:9090 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused), http call failed after 1 milliseconds for URL: http://localhost:9090/bookTitle
-14:08:45.078 http request failed: 
-org.apache.http.conn.HttpHostConnectException: Connect to localhost:9090 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)
+09:58:24.230 java.net.SocketTimeoutException: Read timed out, http call failed after 5006 milliseconds for URL: http://localhost:9090/bookTitle
+09:58:24.231 http request failed: 
+java.net.SocketTimeoutException: Read timed out
 bookService.feature:6 - 
-org.apache.http.conn.HttpHostConnectException: Connect to localhost:9090 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused)</div>
+java.net.SocketTimeoutException: Read timed out</div>
 <div class="step-row">
 <div class="step-cell skipped">Then status 200</div>
 <div class="time-cell skipped">0</div>
