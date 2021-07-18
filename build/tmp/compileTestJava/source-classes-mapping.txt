@@ -1,0 +1,7 @@
+com/example/feign/karate/bookservice/BookServiceRunner.java
+ com.example.feign.karate.bookservice.BookServiceRunner
+com/example/feign/karate/TestBase.java
+ com.example.feign.karate.TestBase
+com/example/feign/feign/BookControllerAPITest.java
+ com.example.feign.feign.BookControllerAPITest
+ com.example.feign.feign.BookControllerAPITest$LocalRibbonClientConfiguration

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="[bookService]" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-07-18T01:58:19" hostname="wangchaos-MacBook-Pro.local" time="5.035">
+  <properties/>
+  <testcase name="[1:3] Test Book Title" classname="[bookService]" time="5.035">
+    <failure message="com.intuit.karate.exception.KarateException: bookService.feature:6 - &#10;java.net.SocketTimeoutException: Read timed out" type="com.intuit.karate.exception.KarateException">com.intuit.karate.exception.KarateException: bookService.feature:6 - 
+java.net.SocketTimeoutException: Read timed out
+	at ✽.When method get (bookService.feature:6)
+</failure>
+  </testcase>
+  <system-out><![CDATA[09:58:19.216 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:58:19.223 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:58:19.223 [Test worker] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:9090/bookTitle
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:9090
+1 > User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_292)
+
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://localhost:9090][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://localhost:9090][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://localhost:9090
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to localhost/127.0.0.1:9090
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 127.0.0.1:64937<->127.0.0.1:9090
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 5000
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request GET /bookTitle HTTP/1.1
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:58:19.224 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:58:19.224 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 >> GET /bookTitle HTTP/1.1
+09:58:19.225 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: localhost:9090
+09:58:19.225 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+09:58:19.225 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_292)
+09:58:19.225 [Test worker] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+09:58:19.225 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 >> "GET /bookTitle HTTP/1.1[\r][\n]"
+09:58:19.225 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: localhost:9090[\r][\n]"
+09:58:19.225 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+09:58:19.225 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.9 (Java/1.8.0_292)[\r][\n]"
+09:58:19.225 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+09:58:19.225 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+09:58:24.228 [Test worker] DEBUG org.apache.http.wire - http-outgoing-1 << "[read] I/O error: Read timed out"
+09:58:24.228 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: Close connection
+09:58:24.230 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: Shutdown connection
+09:58:24.230 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection discarded
+09:58:24.230 [Test worker] DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://localhost:9090][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:58:24.230 [Test worker] ERROR com.intuit.karate - java.net.SocketTimeoutException: Read timed out, http call failed after 5006 milliseconds for URL: http://localhost:9090/bookTitle
+09:58:24.230 [Test worker] ERROR com.intuit.karate - http request failed: 
+java.net.SocketTimeoutException: Read timed out
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+com/example/feign/feign/BookBuilder.java
+ com.example.feign.feign.BookBuilder
+com/example/feign/feign/imp/BookClientFallback.java
+ com.example.feign.feign.imp.BookClientFallback
+com/example/feign/FeignApplication.java
+ com.example.feign.FeignApplication
+com/example/feign/feign/IBookClient.java
+ com.example.feign.feign.IBookClient
+com/example/feign/controller/BookController.java
+ com.example.feign.controller.BookController
+com/example/feign/feign/Book.java
+ com.example.feign.feign.Book
