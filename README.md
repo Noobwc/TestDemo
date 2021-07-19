@@ -41,6 +41,13 @@ when Fake Http ConsumerController 方法getConsumerById并传入json [id]
 
 then 验证ConsumerService 被正常调用，且参数为[consumer]，且返回值为200
 
+工序 1 正常http请求
+
+given Spy ProducerService addProducer方法
+
+when Fake Http ProducerController方法addProducer方法并传入json [producer]
+
+then 验证ProducerService被正常调用，且参数为[producer]，且返回值为200
 
 
 工序2 接收MQ
@@ -53,7 +60,7 @@ then 验证ConsumerService 被正常调用，且参数为[]
 
 
 
-工序3 happy path的业务逻辑
+工序3 service的业务逻辑
 
 given Spy ConsumerRepository
 
@@ -75,9 +82,9 @@ then 验证返回值与Stub数据相同
 
 工序5 数据库保存
 
-given Fake DB，编写 Migration 增加表xxx，增加Entity Consumer Stub 待查询数据
+given Fake DB，增加Entity Producer Stub 待查询数据
 
-when ConsumerRepository 层方法findConsumerByConsumerName 调用Dummy 查询待保存数据
+when ProducerRepository 层方法findAllProducer 调用Dummy 查询待保存数据
 
 then 验证数据被正常保存
 
