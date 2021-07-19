@@ -7,7 +7,7 @@
 ##### 1. For API Tests by mocking Feign clients using Wiremock
 Run directly
 
-##### 2. For API Tests with Wiremock and Karate
+##### 2. For API Tests with Wiremock and Karate (not run!!!!)
 `SPRING_CONFIG_LOCATION=./src/test/resources/application.yml  gradle clean bootRun`
 
 `gradle karate` 
@@ -29,6 +29,10 @@ Run directly
 ## Problem
 1.test events were not received
 
-File -> Settings ->Build,Execution, Deployment -> Build Tools -> Gradle
+Solution: File -> Settings ->Build,Execution, Deployment -> Build Tools -> Gradle
 
 Run test using: dropdown selected option was: Gradle(default) changed it to IntelliJ IDEA
+
+2.`SPRING_CONFIG_LOCATION=./src/test/resources/application.yml  gradle clean bootRun` not run, can not test API Tests with Wiremock and Karate.
+
+Solution:
