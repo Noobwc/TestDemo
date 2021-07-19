@@ -88,18 +88,6 @@ public class BookControllerAPITest {
         assertThat(bookResponseEntity.getStatusCodeValue(), is(200));
     }
 
-    @Test
-    public void testFindByIdFallback() {
-        stubFor(get(urlEqualTo("/book/12345")).willReturn(aResponse().withStatus(404)));
-
-        ResponseEntity<Book> bookResponseEntity = bookController.bookSearch("12345");
-
-        Book expectedBookResponse = new Book("fallback-id", "default", "default");
-
-        assertThat(bookResponseEntity.getBody(), is(expectedBookResponse));
-        assertThat(bookResponseEntity.getStatusCodeValue(), is(200));
-    }
-
     @TestConfiguration
     public static class LocalRibbonClientConfiguration {
         @Bean

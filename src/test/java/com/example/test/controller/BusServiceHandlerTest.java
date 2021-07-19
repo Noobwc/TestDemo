@@ -30,7 +30,7 @@ class BusServiceHandlerTest {
     void should_call_consumer_service_update_request_with_consumerName_name_when_get_update_request() {
         //when
         busServiceHandler
-                .onGetUpdateConsumerRequest(ConsumerDTO.builder().consumerName("name").build());
+                .onGetUpdateConsumerDTORequest(ConsumerDTO.builder().consumerName("name").build());
         //then
         Mockito.verify(consumerService).updateRequest("name");
     }

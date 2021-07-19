@@ -26,6 +26,7 @@ public class ConsumerService {
 
     public ConsumerDTO addConsumer(Consumer consumer) {
         consumerMessageRepository.sendConsumerMessage(consumer.getId());
+        consumerMessageRepository.sendExpenseCalenderMessage(consumer.getConsumerName()+"要消费了");
         return consumerRepository.save(consumer).toDTO();
     }
 
@@ -33,7 +34,11 @@ public class ConsumerService {
         return consumerRepository.findConsumerById(id).toDTO();
     }
 
-    public ConsumerDTO updateRequest(String consumerName) {
-        return consumerRepository.findConsumerByConsumerName(consumerName).toDTO();
+    public void updateRequest(String consumerName) {
+        consumerRepository.findConsumerByConsumerName(consumerName).toDTO();
+    }
+
+    public void updateRequest(Long consumerId) {
+         consumerRepository.findConsumerById(consumerId).toDTO();
     }
 }

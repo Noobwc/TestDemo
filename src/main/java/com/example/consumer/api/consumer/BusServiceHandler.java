@@ -1,5 +1,6 @@
 package com.example.consumer.api.consumer;
 
+import com.example.consumer.entity.Consumer;
 import com.example.consumer.service.ConsumerService;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,12 @@ public class BusServiceHandler {
     }
 
     @JmsListener(destination = "consumer.service.result")
-    public void onGetUpdateConsumerRequest(ConsumerDTO consumerDTO){
+    public void onGetUpdateConsumerDTORequest(ConsumerDTO consumerDTO){
         consumerService.updateRequest(consumerDTO.getConsumerName());
+    }
+
+    @JmsListener(destination = "consumer.service.resultId")
+    public void onGetUpdateConsumerRequest(Consumer consumer){
+        consumerService.updateRequest(consumer.getId());
     }
 }

@@ -14,7 +14,7 @@ import org.springframework.web.context.WebApplicationContext;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 /*
-Before Integration Test
+Integration Test
 
 given Fack DB Mock Other Service
 

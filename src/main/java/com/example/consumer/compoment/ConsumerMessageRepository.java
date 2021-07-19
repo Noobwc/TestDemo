@@ -6,4 +6,6 @@ import org.springframework.stereotype.Service;
 public interface ConsumerMessageRepository {
 
   void sendConsumerMessage(Long id);
+
+  void sendExpenseCalenderMessage(String message);
 }

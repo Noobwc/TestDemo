@@ -1,13 +1,13 @@
-com/example/consumer/service/ConsumerService.java
- com.example.consumer.service.ConsumerService
-com/example/consumer/api/consumer/BusServiceHandler.java
- com.example.consumer.api.consumer.BusServiceHandler
-com/example/consumer/compoment/ConsumerJMSClient.java
- com.example.consumer.compoment.ConsumerJMSClient
+com/example/feign/feign/Book.java
+ com.example.feign.feign.Book
+com/example/consumer/compoment/ConsumerRepository.java
+ com.example.consumer.compoment.ConsumerRepository
+com/example/feign/controller/BookController.java
+ com.example.feign.controller.BookController
 com/example/feign/feign/IBookClient.java
  com.example.feign.feign.IBookClient
-com/example/consumer/compoment/ConsumerMessageRepository.java
- com.example.consumer.compoment.ConsumerMessageRepository
+com/example/TestDemoApplication.java
+ com.example.TestDemoApplication
 com/example/consumer/entity/Consumer.java
  com.example.consumer.entity.Consumer
  com.example.consumer.entity.Consumer$ConsumerBuilder
@@ -18,13 +18,13 @@ com/example/consumer/api/consumer/ConsumerDTO.java
  com.example.consumer.api.consumer.ConsumerDTO$ConsumerDTOBuilder
 com/example/feign/feign/imp/BookClientFallback.java
  com.example.feign.feign.imp.BookClientFallback
+com/example/consumer/service/ConsumerService.java
+ com.example.consumer.service.ConsumerService
+com/example/consumer/api/consumer/BusServiceHandler.java
+ com.example.consumer.api.consumer.BusServiceHandler
+com/example/consumer/compoment/ConsumerJMSClient.java
+ com.example.consumer.compoment.ConsumerJMSClient
 com/example/consumer/api/consumer/ConsumerController.java
  com.example.consumer.api.consumer.ConsumerController
-com/example/TestDemoApplication.java
- com.example.TestDemoApplication
-com/example/feign/controller/BookController.java
- com.example.feign.controller.BookController
-com/example/consumer/compoment/ConsumerRepository.java
- com.example.consumer.compoment.ConsumerRepository
-com/example/feign/feign/Book.java
- com.example.feign.feign.Book
+com/example/consumer/compoment/ConsumerMessageRepository.java
+ com.example.consumer.compoment.ConsumerMessageRepository

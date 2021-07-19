@@ -16,4 +16,9 @@ public class ConsumerJMSClient implements ConsumerMessageRepository {
   public void sendConsumerMessage(Long id) {
     jmsTemplate.convertAndSend("consumer.service", id);
   }
+
+  @Override
+  public void sendExpenseCalenderMessage(String message) {
+    jmsTemplate.convertAndSend("consumer.service.expense", message);
+  }
 }
