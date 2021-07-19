@@ -25,13 +25,7 @@ w
 Gsrc/main/java/com/example/consumer/api/consumer/ConsumerController.java,9/5/9513c9f364768f6e3bc9ca68846a1506767b746b
 s
 Csrc/main/java/com/example/consumer/compoment/ConsumerJMSClient.java,0/2/029a3316eb9a627419db9d9d3e43f54e7477172e
-v
-Fsrc/test/java/com/example/feign/karate/bookservice/bookService.feature,7/6/768add797efc63c795bb478a70693171256c2a98
-y
-Isrc/test/java/com/example/feign/karate/bookservice/BookServiceRunner.java,b/d/bd340a818f586cfcee89b681c4918d7819faab15
 u
 Esrc/test/java/com/example/test/controller/ConsumerControllerTest.java,c/9/c9fd514220fbcdea8a2ffda843edc4e0bbe5a1de
 u
 Esrc/test/java/com/example/test/repository/ConsumerRepositoryTest.java,c/7/c79da6cd5fd1591cbf6cb40705b1d32c3eeb0322
-z
-Jsrc/test/java/com/example/test/integrationTest/ConsumerControllerTest.java,5/9/59e8c08fb346dc9a3c0f407628121cb87b2abd11
