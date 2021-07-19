@@ -1,6 +1,7 @@
-package com.example.producer.api.producer;
+package com.example.consumer.api.consumer;
 
 import com.example.consumer.entity.Producer;
+import com.example.consumer.service.ProducerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,9 +16,9 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/producers")
 public class ProducerController {
-    private final com.example.producer.service.ProducerService producerService;
+    private final ProducerService producerService;
 
-    public ProducerController(com.example.producer.service.ProducerService producerService) {
+    public ProducerController(ProducerService producerService) {
         this.producerService = producerService;
     }
 
